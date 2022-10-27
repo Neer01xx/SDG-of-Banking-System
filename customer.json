@@ -1,0 +1,228 @@
+[
+    {
+        "Entity_Type": "Customer",
+        "load": 25,
+        "properties": {
+            "cust_type": "A",
+            "employment": "Y",
+            "salary": {
+                "type": "normal",
+                "loc": 250000,
+                "scale": 100000
+            },
+            "decision_params": {
+                "withdrawal": {
+                    "rate": {
+                      "type": "lognormal",
+                      "type": "exponential",
+                      "scale": 0.1
+                    },
+                    "amount": {
+                        "type": "normal",
+                        "loc": 20000,
+                        "scale": 15000
+                    },
+                    "luck": 0.01
+                },
+                "deposit": {
+                    "rate": {
+                      "type": "uniform",
+                      "low": 0,
+                      "high": 0.005
+                    },
+                    "amount": {
+                        "type": "normal",
+                        "loc": 1000,
+                        "scale": 700
+                    }
+                },
+                "loan": {
+                    "rate": {
+                      "type": "uniform",
+                      "low": 0,
+                      "high": 0.0008
+                    },
+                    "amount": {
+                        "type": "normal",
+                        "loc": 1000000,
+                        "scale": 700
+                    },
+                    "interest_rate" : 8,
+                    "tenure": {
+                        "type": "normal",
+                        "loc": 13,
+                        "scale": 10
+                    }  
+                }
+                        
+            }
+        }
+    },
+    {
+        "Entity_Type": "Customer",
+        "load": 150,
+        "properties": {
+            "cust_type": "B",
+            "employment": "Y",
+            "salary": {
+                "type": "normal",
+                "loc": 50000,
+                "scale": 30000
+            },
+            "decision_params": {
+                "withdrawal": {
+                    "rate": {
+                      "type": "uniform",
+                      "low": 0,
+                      "high": 1
+                    },
+                    "amount": {
+                        "type": "exponential",
+                        "scale": 50
+                    },
+                    "luck": 0.01
+                },
+                "deposit": {
+                    "rate": {
+                      "type": "exponential",
+                      "scale": 0.001
+                    },
+                    "amount": {
+                        "type": "uniform",
+                        "low": 0,
+                        "high": 100
+                    }
+                },
+                "loan": {
+                    "rate": {
+                      "type": "uniform",
+                      "low": 0,
+                      "high": 0.001
+                    },
+                    "amount": {
+                        "type": "normal",
+                        "loc": 1000000,
+                        "scale": 700
+                    },
+                    "interest_rate": 8,
+                    "tenure": {
+                        "type": "normal",
+                        "loc": 10,
+                        "scale": 10
+                    }  
+                }
+                
+            }
+        }
+    },
+    {
+        "Entity_Type": "Customer",
+        "load": 150,
+        "properties": {
+            "cust_type": "C",
+            "employment": "Y",
+            "salary": {
+                "type": "constant",
+                "value": 0
+            },
+            "decision_params": {
+                "withdrawal": {
+                    "rate": {
+                      "type": "exponential",
+                      "scale": 0.1
+                    },
+                    "amount": {
+                        "type": "exponential",
+                        "scale": 25
+                    },
+                    "luck": 0.001
+                },
+                "deposit": {
+                    "rate": {
+                      "type": "uniform",
+                      "low": 0.7,
+                      "high": 0.9
+                    },
+                    "amount": {
+                        "type": "uniform",
+                        "low": 0,
+                        "high": 1000
+                    }
+                },
+                "loan": {
+                    "rate": {
+                      "type": "uniform",
+                      "low": 0,
+                      "high": 0.0009
+                    },
+                    "amount": {
+                        "type": "normal",
+                        "loc": 700000,
+                        "scale": 700
+                    },
+                    "interest_rate" : 8,
+                    "tenure" : {
+                        "type": "normal",
+                        "loc": 8,
+                        "scale": 10
+                    }  
+                }
+            }
+        }
+    },
+    {
+        "Entity_Type": "Customer",
+        "load": 25,
+        "properties": {
+            "cust_type": "D",
+            "employment": "N",
+            "salary": {
+                "type": "normal",
+                "loc": 2725,
+                "scale": 10
+            },
+            "decision_params": {
+                "withdrawal": {
+                    "rate": {
+                      "type": "inverse_exponential",
+                      "scale": 0.1
+                    },
+                    "amount": {
+                        "type": "constant",
+                        "value": 2725
+                    },
+                    "luck": 0.001
+                },
+                "deposit": {
+                    "rate": {
+                      "type": "exponential",
+                      "scale": 0.0005
+                    },
+                    "amount": {
+                        "type": "uniform",
+                        "low": 0,
+                        "high": 1000
+                    }
+                },
+                "loan": {
+                    "rate": {
+                      "type": "uniform",
+                      "low": 0,
+                      "high": 0.0005
+                    },
+                    "amount": {
+                        "type": "normal",
+                        "loc": 100000,
+                        "scale": 700
+                    },
+                    "interest_rate": 8,
+                    "tenure": {
+                        "type": "normal",
+                        "loc": 10,
+                        "scale": 10
+                    }
+                }
+            }
+        }
+    }
+]
